@@ -1,0 +1,19 @@
+Ringcut makes ringtones, notification sounds and alarms from your own audio and videos. It is free and open source, with no ads, no tracking, no analytics and no account, and it has no internet permission at all.
+
+<b>Features</b>
+<ul>
+<li>Open any audio file, or pick a video and keep just its sound.</li>
+<li>See the waveform, drag the start and end handles, fine-tune each by 0.1 s, and zoom in for precise cuts.</li>
+<li>Preview exactly the selected part before saving.</li>
+<li>Optional fade-in and fade-out.</li>
+<li>Save as a ringtone, notification, alarm or music file in the matching system folder, so it shows up in the phone's sound pickers.</li>
+<li>Set a saved tone as your default ringtone, notification or alarm sound in one tap.</li>
+<li>A list of the tones you made, with play, rename and delete.</li>
+<li>Share an audio or video file from another app straight into Ringcut.</li>
+</ul>
+
+<b>About the output format</b>
+Tones are saved as AAC audio in an .m4a file, which every Android phone plays. Android has no built-in MP3 encoder, so Ringcut extracts audio; it does not convert to MP3. When the source is already AAC and no fade is applied, the original audio is copied without re-encoding.
+
+<b>Permissions</b>
+Ringcut asks for no storage or media permission: files are opened through the system file and photo pickers, which give it access to just the file you choose. The only permission is "Modify system settings", requested only when you choose to set a tone as the default, because Android requires it for that.
