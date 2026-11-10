@@ -20,12 +20,16 @@ object FileNaming {
         return cleaned.take(MAX_LENGTH).trimEnd('.', ' ')
     }
 
-    /** The source's display name without its extension, as the starting title. */
-    fun titleFromSource(displayName: String?): String {
+    /**
+     * The source's display name without its extension, as the starting title. The Photo
+     * Picker hides real file names behind numeric IDs ("48.mp4"), which make useless
+     * titles, so those fall back to [fallback] too.
+     */
+    fun titleFromSource(displayName: String?, fallback: String = FALLBACK): String {
         val name = displayName.orEmpty()
         val dot = name.lastIndexOf('.')
-        val base = if (dot > 0) name.substring(0, dot) else name
-        return sanitize(base).ifEmpty { FALLBACK }
+        val base = sanitize(if (dot > 0) name.substring(0, dot) else name)
+        return if (base.isEmpty() || base.all { it.isDigit() }) sanitize(fallback).ifEmpty { FALLBACK } else base
     }
 
     /** File name for a title, always ending in [EXTENSION]. */

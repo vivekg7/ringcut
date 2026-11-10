@@ -88,7 +88,8 @@ class EditorViewModel(app: Application) : AndroidViewModel(app) {
 
     fun open(source: Source) {
         close()
-        _state.value = EditorState(source = source, title = FileNaming.titleFromSource(source.name))
+        val fallback = if (source.isVideo) getApplication<Application>().getString(R.string.video_title_fallback) else FileNaming.FALLBACK
+        _state.value = EditorState(source = source, title = FileNaming.titleFromSource(source.name, fallback))
         loadJob = viewModelScope.launch {
             try {
                 val started = SystemClock.elapsedRealtime()

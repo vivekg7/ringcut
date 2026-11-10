@@ -19,6 +19,9 @@ class FileNamingTest {
         assertEquals("hidden", FileNaming.titleFromSource(".hidden"))
         assertEquals(FileNaming.FALLBACK, FileNaming.titleFromSource(null))
         assertEquals(FileNaming.FALLBACK, FileNaming.titleFromSource("???.mp3"))
+        // Photo Picker's numeric names are replaced by the caller's fallback.
+        assertEquals("Video sound", FileNaming.titleFromSource("48.mp4", "Video sound"))
+        assertEquals("2024 mix", FileNaming.titleFromSource("2024 mix.mp3", "Video sound"))
     }
 
     @Test fun fileNameAlwaysEndsInM4aOnce() {

@@ -7,6 +7,7 @@ import android.media.MediaExtractor
 import android.media.MediaFormat
 import android.media.MediaMetadataRetriever
 import android.net.Uri
+import android.util.Log
 import com.crylo.ringcut.core.PeakAccumulator
 import com.crylo.ringcut.core.Waveform
 import kotlinx.coroutines.Dispatchers
@@ -31,7 +32,11 @@ class WaveformDecoder(private val context: Context) {
             extractor.setDataSource(context, uri, null)
             val track = (0 until extractor.trackCount).firstOrNull {
                 extractor.getTrackFormat(it).getString(MediaFormat.KEY_MIME)?.startsWith("audio/") == true
-            } ?: throw NoAudioTrackException()
+            } ?: run {
+                val mimes = (0 until extractor.trackCount).map { extractor.getTrackFormat(it).getString(MediaFormat.KEY_MIME) }
+                Log.w("Ringcut", "No audio track among $mimes")
+                throw NoAudioTrackException()
+            }
             extractor.selectTrack(track)
             val format = extractor.getTrackFormat(track)
             var durationUs = if (format.containsKey(MediaFormat.KEY_DURATION)) format.getLong(MediaFormat.KEY_DURATION) else -1L

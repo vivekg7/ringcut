@@ -41,6 +41,7 @@
     <string name="play_failed">Couldn’t play this tone.</string>
 
     <!-- Editor -->
+    <string name="video_title_fallback">Video sound</string>
     <string name="reading_audio">Reading audio… %1$d%%</string>
     <string name="error_no_audio">This file has no audio track.</string>
     <string name="error_decode">Couldn’t read this file. It may be damaged, or in a format this phone can’t decode.</string>
