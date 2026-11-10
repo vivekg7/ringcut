@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Ringcut</string>
+
+    <!-- Home -->
+    <string name="pick_audio">Cut an audio file</string>
+    <string name="pick_audio_hint">Songs, recordings, any audio file</string>
+    <string name="pick_video">Extract audio from a video</string>
+    <string name="pick_video_hint">Keep the sound, drop the picture</string>
+    <string name="my_tones">Made with Ringcut</string>
+    <string name="no_tones">Tones you save show up here, ready to play, rename or set as default.</string>
+    <string name="tone_details">%1$s · %2$s</string>
+    <string name="tone_details_no_duration">%1$s</string>
+
+    <!-- Tone types -->
+    <string name="type_ringtone">Ringtone</string>
+    <string name="type_notification">Notification</string>
+    <string name="type_alarm">Alarm</string>
+    <string name="type_music">Music</string>
+
+    <!-- Common actions -->
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="more_options">More options</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="ok">OK</string>
+    <string name="back">Back</string>
+
+    <!-- Tone list actions -->
+    <string name="set_default_ringtone">Set as ringtone</string>
+    <string name="set_default_notification">Set as notification sound</string>
+    <string name="set_default_alarm">Set as alarm sound</string>
+    <string name="rename_title">Rename tone</string>
+    <string name="name_label">Name</string>
+    <string name="delete_title">Delete “%1$s”?</string>
+    <string name="delete_message">The file is removed from your phone. If it is a default sound right now, Android goes back to its own default.</string>
+    <string name="rename_failed">Couldn’t rename the tone.</string>
+    <string name="delete_failed">Couldn’t delete the tone.</string>
+    <string name="play_failed">Couldn’t play this tone.</string>
+
+    <!-- Editor -->
+    <string name="reading_audio">Reading audio… %1$d%%</string>
+    <string name="error_no_audio">This file has no audio track.</string>
+    <string name="error_decode">Couldn’t read this file. It may be damaged, or in a format this phone can’t decode.</string>
+    <string name="waveform_description">Waveform. Drag the handles, or tap, to choose the part to keep.</string>
+    <string name="start_label">Start</string>
+    <string name="end_label">End</string>
+    <string name="length_label">Length %1$s</string>
+    <string name="nudge_back">−0.1 s</string>
+    <string name="nudge_forward">+0.1 s</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="zoom_out">Zoom out</string>
+    <string name="zoom_fit">Show the whole track</string>
+    <string name="preview">Preview selection</string>
+    <string name="stop_preview">Stop preview</string>
+    <string name="fade_in">Fade in</string>
+    <string name="fade_out">Fade out</string>
+    <string name="fade_length">Fade length: %1$s s</string>
+    <string name="save_as">Save as</string>
+    <string name="format_note">Saved as AAC audio in an .m4a file, which every Android phone can play. Android has no built-in MP3 encoder, so Ringcut extracts audio; it doesn’t convert to MP3. If the source is already AAC and you add no fade, the original audio is copied without re-encoding.</string>
+    <string name="save">Save</string>
+    <string name="saving">Saving…</string>
+    <string name="export_failed">Couldn’t save the tone. The source may use a format this phone can’t re-encode.</string>
+    <string name="saved_title">Saved</string>
+    <string name="saved_message">“%1$s” is saved in your %2$s folder.</string>
+    <string name="saved_copied">The original audio was kept without re-encoding.</string>
+    <string name="saved_reencoded">The audio was encoded as AAC.</string>
+
+    <!-- Default tone / WRITE_SETTINGS -->
+    <string name="write_settings_title">Allow changing system sounds?</string>
+    <string name="write_settings_message">Android only lets an app change your default ringtone, notification or alarm sound if you allow it to “Modify system settings”. Ringcut uses this for one thing: setting the tone you choose as the default. It changes no other setting.\n\nOn the next screen, turn the switch on, then come back.</string>
+    <string name="open_settings">Open settings</string>
+    <string name="default_set_ringtone">Ringtone changed.</string>
+    <string name="default_set_notification">Notification sound changed.</string>
+    <string name="default_set_alarm">Alarm sound changed.</string>
+    <string name="permission_denied">Permission not given, so the default sound wasn’t changed.</string>
+    <string name="default_failed">Android didn’t accept the new default sound.</string>
+</resources>

@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Scaled into the 66dp safe zone so the splash screen's circular mask keeps the handles. -->
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.78"
+        android:scaleY="0.78">
+        <!-- Waveform bars between two trim handles: the whole app in one picture. -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M31,47h4v14h-4zM38,41h4v26h-4zM45,34h4v40h-4zM52,39h4v30h-4zM59,32h4v44h-4zM66,43h4v22h-4zM73,48h4v12h-4z" />
+        <path
+            android:fillColor="#FFFFD180"
+            android:pathData="M25,30h2.5v48h-2.5zM80.5,30h2.5v48h-2.5zM22,74h8.5v6h-8.5zM77.5,28h8.5v6h-8.5z" />
+    </group>
+</vector>

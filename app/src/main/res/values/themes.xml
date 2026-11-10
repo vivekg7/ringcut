@@ -1,0 +1,8 @@
+<resources>
+    <!-- Only the window before Compose draws: follow the system light/dark setting so the
+         launch frame doesn't flash the wrong colour. Compose paints everything after. -->
+    <style name="Theme.Ringcut" parent="android:Theme.DeviceDefault.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
